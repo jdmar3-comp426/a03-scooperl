@@ -8,9 +8,7 @@
  * returns: '3 + 4 = 7'
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
-export function sumToString(a, b) {
-
-}
+export const sumToString = (a,b) => a + b;
 
 
 /**
@@ -24,7 +22,12 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    var length = endNumber - startNumber + 1;
+    let array = [startNumber];
+    for (let i = startNumber+1; i <= endNumber; i++) {
+        array.push(i);
+    }
+    return array;
 }
 
 /**
