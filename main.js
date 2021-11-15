@@ -33,7 +33,7 @@ let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 's
 let newrecord = removeKeys(idrecord, [ 'age', 'password' ]);
 console.log(idrecord); 
 console.log(newrecord);
-*/
+
 
 import {getSum} from './src/medium/medium_1.js';
 console.log(getSum([14,8,5,7,7,5,2,7,5,3,47,9]));
@@ -44,3 +44,7 @@ console.log(getMedian(array));
 
 import {getStatistics} from './src/medium/medium_1.js';
 console.log(getStatistics([14,8,5,7,7,5,2,7,5,3,47,9]));
+*/
+
+import {allCarStats} from './src/medium/medium_2.js';
+console.log(allCarStats);
