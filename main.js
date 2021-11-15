@@ -27,10 +27,20 @@ let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 's
 let newrecord = removeKeyNonDestructive(idrecord, 'age');
 console.log(idrecord);
 console.log(newrecord);
-*/
 
 import {removeKeys} from './src/mild/mild_2.js';
 let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' };
 let newrecord = removeKeys(idrecord, [ 'age', 'password' ]);
 console.log(idrecord); 
 console.log(newrecord);
+*/
+
+import {getSum} from './src/medium/medium_1.js';
+console.log(getSum([14,8,5,7,7,5,2,7,5,3,47,9]));
+
+import {getMedian} from './src/medium/medium_1.js';
+let array = [1];
+console.log(getMedian(array));
+
+import {getStatistics} from './src/medium/medium_1.js';
+console.log(getStatistics([14,8,5,7,7,5,2,7,5,3,47,9]));
