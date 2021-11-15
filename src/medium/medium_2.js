@@ -107,7 +107,6 @@ function highAvg() {
 
 function getStats() {
     var yearArr = [];
-    console.log(mpg_data[0]["year"])
     for (const element of mpg_data) {
         yearArr.push(element["year"]);
     }
