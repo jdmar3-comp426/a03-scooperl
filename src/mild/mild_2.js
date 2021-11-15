@@ -7,7 +7,7 @@
  */
 export function identifyVariable(variable) {
    var type = typeof(variable);
-   return '{ type: ' + type + ' , value: ' + variable + ' }';
+   return "{ type: '" + type + "', value: '" + variable + "' }";
 }
 
 
@@ -25,7 +25,12 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   var arrLength = array.length;
+   var finalArr = [];
+   for (var i = 0; i < arrLength; i++) {
+      finalArr.push(identifyVariable(array[i]))
+   }
+   return finalArr;
 }
 
 /**
