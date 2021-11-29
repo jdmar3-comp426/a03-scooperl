@@ -53,8 +53,11 @@ console.log(allCarStats);
 import car_data from './src/medium/data/mpg_data.js';
 import {searchHighPower} from './src/medium/medium_3.js';
 console.log(searchHighPower(car_data, 630, 730));
-*/
 
 import car_data from './src/medium/data/mpg_data.js';
 import {searchByYear} from './src/medium/medium_3.js';
-console.log(searchByYear(car_data, [ 2016, 2018 ]));
+console.log(searchByYear(car_data, [ 2009, 2016]));
+*/
+import car_data from './src/medium/data/mpg_data.js';
+import {searchName} from './src/medium/medium_3.js';
+console.log(searchName(car_data, 'Kia Soul'));

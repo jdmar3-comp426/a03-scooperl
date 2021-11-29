@@ -48,7 +48,9 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    var filtered = car_data.filter(car => car.id.includes(searchTerm));
+    var sorted= filtered.sort((a,b) => a.id.indexOf(searchTerm) - b.id.indexOf(searchTerm));
+    return sorted;
 }
 
 
@@ -62,24 +64,18 @@ export function searchName(car_data, searchTerm) {
  */
 export function searchByYear(car_data, years) {
     var filtered = car_data;
-    for (const element of years) {
-        filtered = filtered.filter((car) => car.year == element)
-    }
 /*
+    for (var i=0; i<years.length; i++) {
+        filtered = filtered.filter(car => car.year === years[i]);
+        console.log(filtered);
+    }
+    ** Not as efficient as it calls the filter function for every year in the years array
+*/
     var filtered = car_data.filter(function(car) {
         for (const element of years) {
-            if (element == car["year"]) { return true; }
+            if (element === car.year) { return true; }
         } return false;
     })
-*/
-    return filtered.sort((a,b) => b.years - a.years);
-}
 
-function boolYear(element,years) {
-    for (const elements of years) {
-        if (elements == element["years"]) {
-            return true;
-        }
-    }
-    return false;
+    return filtered.sort((a,b) => b.years - a.years);
 }
