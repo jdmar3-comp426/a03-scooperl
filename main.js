@@ -57,7 +57,29 @@ console.log(searchHighPower(car_data, 630, 730));
 import car_data from './src/medium/data/mpg_data.js';
 import {searchByYear} from './src/medium/medium_3.js';
 console.log(searchByYear(car_data, [ 2009, 2016]));
-*/
+
 import car_data from './src/medium/data/mpg_data.js';
 import {searchName} from './src/medium/medium_3.js';
 console.log(searchName(car_data, 'Kia Soul'));
+
+import {repeat} from './src/spicy/spicy_9.js';
+repeat(console.log, 5, 'What up?');
+
+import {tenTimesFifty} from './src/spicy/spicy_9.js';
+console.log(tenTimesFifty());
+
+
+import {everyEven} from './src/spicy/spicy_9.js';
+console.log(everyEven([7, 1, 7, 1, 7, 1, 7], x => x === 3));
+
+import {someEven} from './src/spicy/spicy_9.js';
+console.log(someEven([5, 7, 1, 7, 1, 7, 1, 7], x => x === 7));
+
+import {filter} from './src/spicy/spicy_9.js';
+console.log(filter(['spectacle', 'pretend', 'orange', 'melt'], x => x[2] === 'e'));
+
+import {anEvenIsOdd} from './src/spicy/spicy_9.js';
+console.log(anEvenIsOdd([4, 5, 6, 7, 8, 9, 7]));
+*/
+import {hasExactly} from './src/spicy/spicy_9.js';
+console.log(hasExactly([4, 5, 6, 7, 8, 9, 7], x => x === 7, 2));
